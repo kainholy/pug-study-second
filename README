@@ -1,0 +1,8 @@
+/* ローカルサーバー立ち上げ */
+gulp
+
+/* pugのbuildコマンド */
+gulp pug
+
+/* sassのbuildコマンド */
+gulp sass
