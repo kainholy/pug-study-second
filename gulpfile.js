@@ -32,12 +32,12 @@ gulp.task("sass", function(){
         .src([ 'src/sass/**/*.scss', '!src/sass/**/_*.scss' ])
         .pipe(sass.sync({
             outputStyle: 'expanded'
-            })
-        )
+        }))
         .pipe( gulp.dest( 'dist/css' ) );
 });
 
-gulp.task("watch", function(){
+gulp.task("watch", function(callback){
     gulp.watch("sass/**/*.scss", gulp.series(["sass"]))
     gulp.watch("src/**/*.pug", gulp.series(["pug"]))
+    callback();
 });

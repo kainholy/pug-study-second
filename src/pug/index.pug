@@ -4,11 +4,66 @@ html(lang='ja')
 		meta(charset='UTF-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		link(rel='stylesheet', href='css/sample.css')
+		link(rel='stylesheet', href='css/reset.css')
 		title タイトル
 		meta(name='description', content='')
 		meta(name='keywords', content='')
 	body
-		#content
-			.inner
-				p テストテスト
+		header.l-header
+			h1.l-header-logo GRASS FIELD
+			nav.l-header-nav
+				ul.l-header-nav_list
+					- const navs = ['HOME','事業内容','商品紹介','会社概要','採用情報','お問い合わせ']
+					each nav in navs
+						li.l-header-nav_list-item: a.l-header-nav_list-link(href='#') #{nav}
+
+		main.l-main
+			.p-mv
+				.p-mv-inner.content-area
+					h1.p-mv-inner_title
+						| キャッチコピーの
+						br
+						| 文章が入りますキャッチ
+						br
+						| コピーの文章が入ります
+					.p-mv-inner_img(src="")
+
+
+			section.p-service.section
+				.content-area
+					h1.title SERVICE
+					.p-service_card
+						ul.p-service_card-list.padding
+							- const serviceCards = [{title: 'サービス名',text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'},{title: 'サービス名',text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'},{title: 'サービス名',text: 'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'}]
+							each serviceCard in serviceCards
+								li.p-service_card-item
+									.p-service_card-item_img
+									p.p-service_card-item_title #{serviceCard.title}
+									p.p-service_card-item_text #{serviceCard.text}
+									.p-service_card-item_button: a 詳しくみる
+						.p-card-button: a 事業内容
+
+			section.p-pickup.section
+				.content-area
+					h1.title PICK UP
+					.p-pickup_card
+						ul.p-pickup_card-list.padding
+							- const pickupCards = ['商品タイトル','商品タイトル','長い商品タイトルタイトル最大30文字まであり得ます','商品タイトルタイトル']
+							each pickupCard in pickupCards
+								li.p-pickup_card-item
+										.p-pickup_card-item_img
+										.p.p-pickup_card-item_text ＞#{pickupCard}
+						.p-card-button: a 商品紹介
+
+		footer.l-footer 
+			.l-footer-conteiner 
+				nav.l-footer-nav 
+					- const footerNavs = ['サイトポリシー','プライバシーポリシー','サイトマップ']
+					each footerNav in footerNavs
+						a(href="#") #{footerNav}
+				.l-footer_logo
+					p ©sample All Rights Reserved.
+
+		
+
 		script(src='js/script.js')

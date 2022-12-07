@@ -1,10 +1,202 @@
-#content{
-    .inner {
-        p {
-            font-size: 100px;
-            color: #f8f800;
-            padding: 20px;
-            background-color: #000;
-        }
-    }
+$green: #37952F;
+$light-green: #70CC33;
+$black: #333333;
+$white: #FFFFFF;
+$gray: #707070;
+$light-gray: #EEEEEE;
+
+
+body{
+	width: 100%;
+}
+
+.content-area {
+	width: 67.75%;
+	margin: auto;
+}
+.section {
+	padding-top: 80px;
+}
+.title {
+	text-align: center;
+	color: $black;
+	font-size: 48px;
+	font-family: 'Oswald';
+}
+.p{
+	&-card {
+		&-button {
+			text-align: center;
+			border: $green solid 1px;
+			width: 400px;
+			margin: 0 auto;
+			padding: 20px 0;
+			a {
+				font-size: 20px;
+				font-weight: bold;
+			}
+		}
+	}
+}
+.padding {
+	padding: 40px 0;
+}
+
+.l {
+  &-header {
+		width: 100%;
+		background-color: $white;
+		height: 70px;
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 5px;
+		align-items: center;
+		margin: auto;
+
+		&-logo{
+			color: $green;
+			font-size: 30px;
+			font-weight: bold;
+			padding-left: 10px;
+			font-family: 'Oswald';
+		}
+		&-nav {
+			padding-right: 5px;
+			&_list {
+				display: flex;
+				justify-content: space-between;
+				list-style: none;
+				width: 613px;
+				&-item {
+					color: $black;
+					font-size: 15px;
+					font-weight: 900;
+				}
+			}
+		}
+	}
+
+	&-main {
+		width: 100%;
+		.p {
+			&-mv {
+				width: 100%;
+				height: 480px;
+				background-color: $green;
+				display: flex;
+				align-items: center;
+				&-inner{
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					align-items: center;
+					&_title {
+						color: $white;
+						font-size: 25px;
+						font-weight: bold;
+						line-height: 2.5;
+					}
+					&_img {
+						border: #FFFFFF solid 2px;
+						height: 300px;
+					}
+				}
+			}
+
+			&-service {
+				&_card {
+					&-list {
+						width: 100%;
+						display: grid;
+						grid-template-columns: 1fr 1fr 1fr;
+						gap: 20px;
+					}
+					&-item {
+						border: $gray solid 1px;
+						width: 100%;
+						height: auto;
+						align-items: center;
+						&_img {
+							height: 160px;
+							width: 100%;
+							color: $light-gray;
+							background-color: $light-gray;
+						}
+						&_title {
+							font-size: 20px;
+							width: 90%;
+							padding-top: 20px;
+							color: $black;
+							font-weight: bold;
+							margin: 0 auto;
+						}
+						&_text {
+							width: 90%;
+							padding-top: 20px;
+							line-height: 1.4;
+							color: $black;
+							margin: 0 auto;
+						}
+						&_button {
+							margin: 20px auto 20px;
+							text-align: center;
+							color: $white;
+							background-color: $green;
+							width: 90%;
+							padding: 10px;
+						}
+					}
+				}
+			}
+
+			&-pickup {
+				&_card {
+					&-list {
+						width: 100%;
+						display: grid;
+						grid-template-columns: 1fr 1fr 1fr 1fr;
+						gap: 20px;
+					}
+					&-item {
+						height: auto;
+						width: 100%;
+						&_img {
+							background: $light-gray;
+							width: 100%;
+							height: 162px;
+						}
+						&_text {
+							padding-top: 20px;
+							width: 100%;
+							font-size: 15px;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+	}
+	&-footer {
+		width: 100%;
+		margin-top: 120px;
+		&-conteiner {
+			background-color: $black;
+			display: flex;
+			justify-content: space-between;
+			padding: 40px 20px;
+		}
+		&-nav {
+			width: 30%;
+			display: flex;
+			justify-content: space-between;
+			a {
+				color: $white;
+				font-size: 14px;
+				font-weight: bold;
+			}
+		}
+		&_logo {
+			color: $white;
+			font-size: 10px;
+		}
+	}
 }
